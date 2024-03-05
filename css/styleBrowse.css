@@ -1,0 +1,28 @@
+
+
+header {
+    height: 68px;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+.headerSolid {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    display: none;
+}
+
+.heroImg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.heroImg img {
+    width: 100%;
+}

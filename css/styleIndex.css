@@ -1,0 +1,44 @@
+
+
+header{
+    height: 92px;
+    width: 100%;
+    padding:24px 171px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1280px){
+    header {
+        padding:24px 32px;
+    }
+}
+
+.navBranding {
+    height: 100%;
+    width: fit-content;
+    padding-bottom: 4px;
+}
+
+.navBranding img{
+    height: 100%;
+}
+
+.navRight {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+}
+
+.shfkjdsh {
+    height: 110vh;
+}
+
+.signInButton {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: var(--zestflix_color);
+}
