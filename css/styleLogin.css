@@ -1,0 +1,11 @@
+input{
+    color: black;
+}
+
+button{
+    color: black;
+}
+
+#ShowMore{
+    display: none;
+}

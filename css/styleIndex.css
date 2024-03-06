@@ -1,17 +1,15 @@
-
-
-header{
+header {
     height: 92px;
     width: 100%;
-    padding:24px 171px;
+    padding: 24px 80px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1280px) {
     header {
-        padding:24px 32px;
+        padding: 24px 32px;
     }
 }
 
@@ -21,7 +19,7 @@ header{
     padding-bottom: 4px;
 }
 
-.navBranding img{
+.navBranding img {
     height: 100%;
 }
 
@@ -36,9 +34,58 @@ header{
 }
 
 .signInButton {
-    border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
+    width: 75px;
+    height: 30.4px;
+    border-width: 0.0625rem;
+    border-radius: 0.1875rem;
+
+    min-height: 2rem;
+    border: 0px;
     background-color: var(--zestflix_color);
+
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Netflix Sans;
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.heroImgIndex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.heroImgIndex img {
+    width: 100%;
+    opacity: 25%
+}
+
+.LanguageSelect {
+    box-sizing: content-box;
+    width: 99.2px;
+    height: 20px;
+    padding: 6px 36px;
+    background-color: rgb(20, 20, 20);
+    font-family: Netflix Sans;
+    font-weight: bolder;
+    border: 1 solid inset;
+    border-radius: 0.1875rem;
+
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+.LanguageSelect option{
+    margin: 40px;
+    background: white;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+

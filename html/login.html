@@ -15,12 +15,24 @@
             <h1>Sign In</h1>
 
             <div class="user-box">
-                <input type="text" placeholder="Email or phone number">
+                <input type="text" placeholder="Email or phone number" id="usernameInfo">
             </div>
 
             <input type="password" placeholder="Password" id="passwordInput">
+            <button id="getDataButton">Sign In</button>
             <button id="toggleButton">Show</button>
         </form>
+    </div>
+
+    <div>
+        <Label>Remember Me</Label><input type="checkbox">
+        <a href="loginHelp.html">Need Help?</a>
+    </div>
+
+    <div>
+        <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
+        <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
+                more.</button></p><p id="displayText" style="display: none;"></p>
     </div>
 
     <script src="/js/scriptLogin.js"></script>

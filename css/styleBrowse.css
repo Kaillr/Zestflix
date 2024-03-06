@@ -1,10 +1,3 @@
-    @font-face {
-        font-family: 'Netflix Sans';
-        font-weight: 300;
-        font-display: optional;
-        src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
-    }
-
     header {
         height: 68px;
         width: 100%;
@@ -23,15 +16,21 @@
         }
     }
 
+    @media (max-width: 950px) {
+        header {
+            height: 41px;
+        }
+    }
+
     .headerSolid {
         height: 100%;
         width: 100%;
         top: 0;
         left: 0;
-        background-color: black;
+        background: linear-gradient(rgb(0,0,0), rgb(20,20,20));
         opacity: 0;
         position: absolute;
-        z-index: -1;
+        z-index: -2;
         transition: 0.5s ease-out;
     }
 
@@ -52,37 +51,92 @@
         width: fit-content;
     }
 
+    @media (max-width: 950px) {
+        .navBranding {
+            height: 15px;
+        }
+    }
+
     .navBranding img {
         height: 100%;
     }
 
     .navLeft {
         display: flex;
-        gap: 23px;
+        gap: 20px;
     }
 
-    .navLeft a {
+    .navLeft a {}
+
+    .navLeft a:hover {
+        color: lightgray;
+        transition: 0.3s ease-in;
+    }
+
+    header a {
         font-family: Netflix Sans;
         font-size: 14px;
         text-decoration: none;
         color: white;
     }
 
+    @media (max-width: 1200px) {
+        header a {
+            font-size: 1vw;
+        }
+    }
+
+    @media (max-width: 1185px) {
+        header a {
+            font-size: 0.9vw;
+        }
+    }
+
+    @media (max-width: 1168px) {
+        header a {
+            font-size: 0.88vw;
+        }
+    }
+
+
     .navRight {
         height: 100%;
         margin: auto 0;
         display: flex;
         align-items: center;
+        gap: 20px;
     }
 
-    .navRight svg {
+    @media (max-width: 1330px) {
+        .navRight, .navLeft {
+            gap: 19px;
+        }
+
+        .headerLeft {
+            gap: calc(19px*2);
+        }
+    }
+
+    @media (max-width: 1150px) {
+        .headerLeft {
+            gap: 22px;
+        }
+    }
+
+    .account svg {
         transition: ease-in-out 0.2s;
         margin-left: 10px;
     }
 
-    .navRight svg:hover {
+    .account svg:hover {
         transition: ease-in-out 0.2s;
         transform: rotate(180deg);
+    }
+
+    @media (max-width: 950px) {
+        .account svg {
+            display: none;
+        }
     }
 
     .navRight img {
