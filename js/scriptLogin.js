@@ -49,13 +49,10 @@ getDataButton.addEventListener('click', function () {
 });
 
 document.getElementById("LearnMore").addEventListener("click", function () {
-    var displayElement = document.getElementById("displayText");
-    displayElement.style.display = "block";
-    displayElement.textContent = "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
-    a
-});
-
-document.getElementById("LearnMore").addEventListener("click", function() {
     var learnMoreButton = document.getElementById("LearnMore");
     learnMoreButton.style.display = "none";
-  });
+});
+document.getElementById("LearnMore").addEventListener("click", function () {
+    var displayElement = document.getElementById("displayText");
+    displayElement.style.display = "block";
+});

@@ -1,3 +1,7 @@
+    body {
+        height: calc(100vh*5);
+    }
+
     header {
         height: 68px;
         width: 100%;
@@ -5,9 +9,14 @@
         top: 0;
         position: fixed;
         z-index: 2;
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0));
+        background: linear-gradient(rgba(0, 0, 0, 0.7) 10%, transparent);
         display: flex;
         justify-content: space-between;
+        user-select: none;
+    }
+
+    header img {
+        pointer-events: none;
     }
 
     @media (max-width: 1500px) {
@@ -27,7 +36,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        background: linear-gradient(rgb(0,0,0), rgb(20,20,20));
+        background: linear-gradient(rgb(0, 0, 0), rgb(20, 20, 20));
         opacity: 0;
         position: absolute;
         z-index: -2;
@@ -53,24 +62,55 @@
 
     @media (max-width: 950px) {
         .navBranding {
-            height: 15px;
+            height: 17.5px;
         }
     }
 
-    .navBranding img {
-        height: 100%;
+    @media (max-width: 840px) {
+        .navBranding {
+            height: 2.6vw;
+        }
     }
 
-    .navLeft {
+    @media (max-width: 698px) {
+        .navBranding {
+            height: 2.2vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navBranding {
+            height: 3.25vw;
+        }
+    }
+
+    .navItems {
         display: flex;
         gap: 20px;
     }
 
-    .navLeft a {}
+    .navItems a {
+ 
+    }
 
-    .navLeft a:hover {
+    .navItems a:hover {
         color: lightgray;
         transition: 0.3s ease-in;
+    }
+
+    .navMenu {
+        display: none;
+        align-items: center;
+    }
+
+    @media (max-width: 885px){
+        .navItems {
+            display: none;
+        }
+
+        .navMenu {
+            display: flex;
+        }
     }
 
     header a {
@@ -78,6 +118,7 @@
         font-size: 14px;
         text-decoration: none;
         color: white;
+        margin-bottom: 1px;
     }
 
     @media (max-width: 1200px) {
@@ -86,18 +127,29 @@
         }
     }
 
-    @media (max-width: 1185px) {
-        header a {
-            font-size: 0.9vw;
-        }
-    }
-
     @media (max-width: 1168px) {
         header a {
-            font-size: 0.88vw;
+            font-size: 1vw;
         }
     }
 
+    @media (max-width: 840px) {
+        header a {
+            font-size: 1.5vw;
+        }
+    }
+
+    @media (max-width: 710px) {
+        header a {
+            font-size: 1.15vw;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header a {
+            font-size: 1.85vw;
+        }
+    }
 
     .navRight {
         height: 100%;
@@ -108,7 +160,9 @@
     }
 
     @media (max-width: 1330px) {
-        .navRight, .navLeft {
+
+        .navRight,
+        .navItems {
             gap: 19px;
         }
 
@@ -123,25 +177,43 @@
         }
     }
 
-    .account svg {
+    #caret {
+        transition: ease-in-out 0.2s;
+        margin-left: 5px;
+    }
+
+    .account #caret {
         transition: ease-in-out 0.2s;
         margin-left: 10px;
     }
 
-    .account svg:hover {
+    .account    #caret:hover {
         transition: ease-in-out 0.2s;
         transform: rotate(180deg);
     }
 
     @media (max-width: 950px) {
-        .account svg {
+        .account #caret {
             display: none;
         }
+
     }
 
     .navRight img {
         height: 32px;
         border-radius: 10%;
+    }
+
+    @media (max-width: 1100px) {
+        .navRight .children {
+            display: none;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .navRight #search {
+            display: none;
+        }
     }
 
     header .account {
@@ -151,14 +223,25 @@
         width: fit-content;
     }
 
-    .heroImg {
+    .heroBanner {
         position: absolute;
         top: 0;
         width: 100%;
     }
 
-    .heroImg img {
+    .heroBanner img,
+    .heroBanner video {
         width: 100%;
+        z-index: -1;
+        filter: brightness(0.7);
+    }
+
+    .bannerGrad {
+        margin-top: -100px;
+        height: 100px;
+        width: 100%;
+        background: linear-gradient(transparent, rgb(20, 20, 20));
+        position: relative;
     }
 
     #bolder {

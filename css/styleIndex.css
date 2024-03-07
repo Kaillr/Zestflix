@@ -1,13 +1,26 @@
+body {
+    height: calc(100vh*5);
+}
+
 header {
     height: 92px;
     width: 100%;
-    padding: 24px 80px;
+    padding: 24px 148px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(rgba(0,0,0,0.7) 50%, transparent 100%);
 }
 
 @media (max-width: 1280px) {
+    header {
+        padding: 24px 80px;
+    }
+}
+
+@media (max-width: 960px) {
     header {
         padding: 24px 32px;
     }
@@ -27,11 +40,12 @@ header {
     display: flex;
     width: fit-content;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.shfkjdsh {
-    height: 110vh;
-}
+
 
 .signInButton {
     width: 75px;
@@ -64,13 +78,15 @@ header {
 
 .heroImgIndex img {
     width: 100%;
-    opacity: 25%
+    height: 100%;
+    opacity: 30%;
+    
 }
 
 .LanguageSelect {
     box-sizing: content-box;
     width: 99.2px;
-    height: 20px;
+    height: calc(20px - 1.6px);
     padding: 6px 36px;
     background-color: rgb(20, 20, 20);
     font-family: Netflix Sans;
@@ -89,3 +105,21 @@ header {
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
+
+.langSelectIcon {
+    height: fit-content;
+    margin-right: -40px;
+    z-index: 20;
+}
+
+.IndexPage_Mtext h1 {
+    padding: 24px 148px;
+}
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    margin-top: -300px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 30%, transparent 100%);
+}

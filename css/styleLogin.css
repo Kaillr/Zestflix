@@ -1,3 +1,89 @@
+header {
+    height: 90px;
+    width: 100%;
+    padding: 0 3%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(rgba(0,0,0,0.8) 50%, transparent 100%);
+}
+
+@media (max-width: 960px) {
+    header {
+        padding: 24px 32px;
+    }
+}
+
+.navBranding {
+    height: 50%;
+    width: min-content;
+}
+
+.navBranding img {
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+}
+
+.navRight {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+}
+
+
+
+
+
+.signInContent {
+    margin: 0 auto;
+    width: 450px;
+    height: 660px;
+
+    box-sizing: border-box;
+    padding: 60px 68px 40px;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+
+
+
+
+
+.signInButton {
+    width: 75px;
+    height: 30.4px;
+    border-width: 0.0625rem;
+    border-radius: 0.1875rem;
+
+    min-height: 2rem;
+    border: 0px;
+    background-color: var(--zestflix_color);
+
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Netflix Sans;
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heroImg {
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    filter: brightness(50%);
+    z-index: -1;
+}
+
 input{
     color: black;
 }
@@ -6,6 +92,6 @@ button{
     color: black;
 }
 
-#ShowMore{
-    display: none;
+select{
+    color: black;
 }

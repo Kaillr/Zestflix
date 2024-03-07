@@ -1,0 +1,57 @@
+header {
+    height: 92px;
+    width: 100%;
+    padding: 24px 148px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    background: rgb(0,0,0);
+    background: linear-gradient(rgba(0,0,0,0.8) 50%, transparent 100%);
+}
+
+@media (max-width: 960px) {
+    header {
+        padding: 24px 32px;
+    }
+}
+
+.navBranding {
+    height: 100%;
+    width: fit-content;
+    padding-bottom: 4px;
+}
+
+.navBranding img {
+    height: 100%;
+}
+
+.navRight {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+}
+
+
+
+.signInButton {
+    width: 75px;
+    height: 30.4px;
+    border-width: 0.0625rem;
+    border-radius: 0.1875rem;
+
+    min-height: 2rem;
+    border: 0px;
+    background-color: var(--zestflix_color);
+
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Netflix Sans;
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

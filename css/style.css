@@ -11,7 +11,9 @@ body {
 }
 
 :root {
-    --zestflix_color: #C11119
+    --zestflix_color: #FF00E4;
+    --netflix_color: #DB202C;
+    --netflix_logo_font: BebasNeue;
 }
 
 @font-face {

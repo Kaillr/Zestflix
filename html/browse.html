@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zestflix</title>
+    <link rel="shortcut icon" href="/media/images/logoes/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleBrowse.css">
 </head>
@@ -16,27 +17,36 @@
         <div class="headerSolid" id="headerSolid"></div>
 
         <div class="headerLeft">
-            <div class="navBranding"><img src="/media/images/logoes/Netflix_Text_logo.svg" alt="Zestflix Logo"></div>
+            <img class="navBranding" src="/media/images/logoes/Netflix_Text_logo.svg" alt="Zestflix Logo">
             <div class="navLeft">
-                <a href="#" id="bolder">Startsiden</a>
-                <a href="#">Serier</a>
-                <a href="#">Filmer</a>
-                <a href="#">Nytt og populært</a>
-                <a href="#">Min liste</a>
-                <a href="#">Bla gjennom etter språk</a>
+                <div class="navMenu">
+                    <a href="#" id="bolder">Bla gjennom</a>
+                    <svg id="caret" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="4 4 16 16"
+                        style="fill: white;transform: ;msFilter:;">
+                        <path d="m11.998 17 7-8h-14z"></path>
+                    </svg>
+                </div>
+                <div class="navItems">
+                    <a href="#" id="bolder">Startsiden</a>
+                    <a href="#">Serier</a>
+                    <a href="#">Filmer</a>
+                    <a href="#">Nytt og populært</a>
+                    <a href="mylist.html">Min liste</a>
+                    <a href="#">Bla gjennom etter språk</a>
+                </div>
             </div>
         </div>
 
         <div class="navRight">
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            <svg id="search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                 style="fill: white;transform: ;msFilter:;">
                 <path
                     d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z">
                 </path>
             </svg>
 
-            <a href="#">Barn</a>
+            <a href="#" class="children">Barn</a>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                 style="fill: white;transform: ;msFilter:;">
@@ -49,7 +59,7 @@
                 <img src="/media/images/pfp/chicken.jpg" alt="">
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="4 4 16 16"
+                <svg id="caret" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="4 4 16 16"
                     style="fill: white;transform: ;msFilter:;">
                     <path d="m11.998 17 7-8h-14z"></path>
                 </svg>
@@ -57,8 +67,9 @@
     </header>
 
     <main>
-        <div class="heroImg">
-            <img src="/media/images/placeholders/browseHero.png" alt="">
+        <div class="heroBanner">
+            <video src="/media/videos/heroes/Squid_Game_The Challenge_Official_Trailer.mp4" autoplay muted loop></video>
+            <div class="bannerGrad"></div>
         </div>
     </main>
 

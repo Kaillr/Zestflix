@@ -4,14 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zestflex</title>
+    <title>Zestflix</title>
+    <link rel="shortcut icon" href="/media/images/logoes/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleLogin.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <form action="">
+    <header>
+        <a class="navBranding" href="/html/index.html">
+            <img src="/media/images/logoes/Netflix_Text_logo.svg" alt="zestflix Logo">
+        </a>
+    </header>
+
+    <main>
+        <div class="signInContent">
+        <div class="">
+
             <h1>Sign In</h1>
 
             <div class="user-box">
@@ -21,19 +30,56 @@
             <input type="password" placeholder="Password" id="passwordInput">
             <button id="getDataButton">Sign In</button>
             <button id="toggleButton">Show</button>
-        </form>
+
+        </div>
+
+        <div>
+            <Label>Remember Me</Label><input type="checkbox">
+            <a href="loginHelp.html">Need Help?</a>
+        </div>
+
+        <div>
+            <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
+            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
+                    more.</button></p>
+            <p style="display: none;" id="displayText"> "The information collected by Google reCAPTCHA is subject to the
+                Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a
+                    href="https://policies.google.com/terms">Terms of Service</a>,
+                and is used for providing, maintaining and improving the reCAPTCHA service and for general security
+                purposes
+                (it is not used for personalised advertising by Google)."</p>
+
+        </div>
     </div>
 
-    <div>
-        <Label>Remember Me</Label><input type="checkbox">
-        <a href="loginHelp.html">Need Help?</a>
-    </div>
+    <img class="heroImg" src="/media/images/heroes/index/Hero_index1.jpg" alt="">
+    </main>
 
-    <div>
-        <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
-        <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
-                more.</button></p><p id="displayText" style="display: none;"></p>
-    </div>
+    <footer>
+        <div>
+            <div>
+                <a href="https://help.netflix.com/en/contactus">Questions? Contact us.</a>
+            </div>
+            <div>
+                <a href="https://help.netflix.com/en/node/412">FAQ</a>
+                <button id="Cookie">Cookie Prefernces</button>
+                <select class="LanguageSelect" id="" name="LanguageSelect">
+                    <option lang="nb" label="Norsk bokmål" value="nb-NO">Norsk bokmål</option>
+                    <option lang="en" label="English" value="en-NO" selected="">English</option>
+                </select>
+            </div>
+            <div>
+                <a href="https://help.netflix.com/en/">Help Centre</a>
+                <a href="https://help.netflix.com/legal/corpinfo">Corporate information</a>
+            </div>
+            <div>
+                <a href="https://help.netflix.com/legal/termsofuse">Terns of Use</a>
+                <a href="https://help.netflix.com/en/node/100637">Advert choices</a>
+            </div>
+
+            <a href="https://help.netflix.com/legal/privacy">Privacy</a>
+        </div>
+    </footer>
 
     <script src="/js/scriptLogin.js"></script>
 </body>

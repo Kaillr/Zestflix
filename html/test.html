@@ -32,65 +32,110 @@
     <div>
         <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
         <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
-                more</button>.</p><p id="displayText" style="display: none;"></p>
+                more</button>.</p>
+        <p id="displayText" style="display: none;"></p>
     </div>
 
-    <script >
-        var passwordInput = document.getElementById('passwordInput');
-var toggleButton = document.getElementById('toggleButton');
-var getDataButton = document.getElementById('getDataButton');
-var usernameInfo = document.getElementById('usernameInfo');
+    <span id="LearnMore">
+        "The information collected by Google reCAPTCHA is subject to the Google "
+        <a href="https://policies.google.com/privacy" id="recaptcha-privacy-link" data-uia="recaptcha-privacy-link"
+            target="_blank">Privacy Policy</a>
+        " and "
+        <a href="https://policies.google.com/terms" id="recaptcha-tos-link" data-uia="recaptcha-tos-link"
+            target="_blank">Terms of Service</a>
+        ", and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes
+        (it is not used for personalised advertising by Google)."
+    </span>
 
-passwordInput.addEventListener('focus', function () {
-    toggleButton.textContent = 'Hide';
-});
-
-passwordInput.addEventListener('blur', function () {
-    toggleButton.textContent = 'Show';
-});
-
-toggleButton.addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent the default behavior of the button click
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleButton.textContent = 'Hide';
-    } else {
-        passwordInput.type = 'password';
-        toggleButton.textContent = 'Show';
-    }
-});
-
-getDataButton.addEventListener('click', function () {
-    event.preventDefault();
-    var username = usernameInfo.value;
-    var password = passwordInput.value;
-
-    if (username === '' || password === '') {
-        alert('Please fill in both fields');
-    } else if (username === 'Fucmass' && password === 'suckonmadick') {
-        window.location = "browse.html";
-    }
-    else if (username === 'Kailler' && password === 'morendin') {
-        window.location = "browse.html";
-    }
-    else if (username === 'Akane' && password === 'zestyzaza') {
-        window.location = "browse.html";
-    }
-    else if (username === 'shitosuplayers@gmail.com' && password === 'ferozzogsara') {
-        window.location = "browse.html";
-    }
-    else {
-        alert('Incorrect username or password');
-    }
+    <script>
+        document.getElementById("LearnMore").addEventListener("click", function () {
+            displayElement.style.display = "block";
 
 
-});
+            var passwordInput = document.getElementById('passwordInput');
+            var toggleButton = document.getElementById('toggleButton');
+            var getDataButton = document.getElementById('getDataButton');
+            var usernameInfo = document.getElementById('usernameInfo');
 
-document.getElementById("LearnMore").addEventListener("click", function () {
-    var displayElement = document.getElementById("displayText");
-    displayElement.style.display = "block";
-    displayElement.textContent = "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
-});
+            passwordInput.addEventListener('focus', function () {
+                toggleButton.textContent = 'Hide';
+            });
+
+            passwordInput.addEventListener('blur', function () {
+                toggleButton.textContent = 'Show';
+            });
+
+            toggleButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default behavior of the button click
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    toggleButton.textContent = 'Hide';
+                } else {
+                    passwordInput.type = 'password';
+                    toggleButton.textContent = 'Show';
+                }
+            });
+
+            getDataButton.addEventListener('click', function () {
+                event.preventDefault();
+                var username = usernameInfo.value;
+                var password = passwordInput.value;
+
+                if (username === '' || password === '') {
+                    alert('Please fill in both fields');
+                } else if (username === 'Fucmass' && password === 'suckonmadick') {
+                    window.location = "browse.html";
+                }
+                else if (username === 'Kailler' && password === 'morendin') {
+                    window.location = "browse.html";
+                }
+                else if (username === 'Akane' && password === 'zestyzaza') {
+                    window.location = "browse.html";
+                }
+                else if (username === 'shitosuplayers@gmail.com' && password === 'ferozzogsara') {
+                    window.location = "browse.html";
+                }
+                else {
+                    alert('Incorrect username or password');
+                }
+
+
+            });
+
+
+
+        /*         document.getElementById("LearnMore").addEventListener("click", function () {
+                    displayElement.style.display = "block";
+                    displayElement.textContent = "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
+                });
+        
+                document.getElementById("LearnMore").addEventListener("click", function () {
+                    var learnMoreButton = document.getElementById("LearnMore");
+                    learnMoreButton.style.display = "none";
+                });
+        
+                         document.getElementById("LearnMore").addEventListener("click", function () {
+                            var displayElement = document.getElementById("displayText");
+                            displayElement.style.display = "block";
+                            displayElement.textContent= "The information collected by Google reCAPTCHA is subject to the Google"
+                            var a = document.createElement('a');
+                            var linkText = document.createTextNode("Privacy Policy");
+                            a.appendChild(linkText);
+                            a.title = "Privacy Policy";
+                            a.href = "login.html";
+                            document.body.appendChild(a);
+                            displayElement.textContent = " and ";
+                            var a = document.createElement('a');
+                            var linkText = document.createTextNode("Terms of Service");
+                            a.appendChild(linkText);
+                            a.title = "Terms of Service";
+                            a.href = "login.html";
+                            document.body.appendChild(a);
+                            displayElement.textContent = ", and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
+                
+                
+                        });  */
+
     </script>
 </body>
 
