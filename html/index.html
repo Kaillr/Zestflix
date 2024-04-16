@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zestflex</title>
+    <link rel="preload"
+        href="https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff"
+        as="font" type="font/woff" crossorigin>
     <link rel="shortcut icon" href="/media/images/logoes/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleIndex.css">
@@ -29,7 +32,13 @@
             <select class="LanguageSelect" id="" name="LanguageSelect">
                 <option lang="nb" label="Norsk bokmål" value="nb-NO">Norsk bokmål</option>
                 <option lang="en" label="English" value="en-NO" selected="">English</option>
+
             </select>
+
+            <svg id="caret" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="4 4 16 16"
+                style="fill: white;transform: ;msFilter:;">
+                <path d="m11.998 17 7-8h-14z"></path>
+            </svg>
 
             <a class="signInButton" href="login.html">Sign in</a>
 
@@ -40,11 +49,31 @@
         <img src="/media/images/heroes/index/Hero_index1.jpg" alt="">
     </div>
 
-    <div class="IndexPage_Mtext">
-        <h1>Unlimited films, TV programmes and more</h1>
-    </div>
 
+
+    <div class="IndexPage_Mtext">
+        <h1>Unlimited films, TV <br> programmes and <br> more</h1>
+        <p class="StartsAt">Starts at NOK 89. Cancel at any time.</p>
+        <p class="email_mt">Ready to watch? Enter your email to create or restart your membership</p>
+        <div class="enterEmail">
+            <input type="email">
+            <button class="GetStarted_bt">Get Started<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" data-mirrorinrtl="true"
+                    class="default-ltr-cache-4z3qvp e1svuwfo1" data-name="ChevronRight" aria-labelledby=":r3:"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                        fill="currentColor"></path>
+                </svg></button>
+
+        </div>
+
+    </div>
+    <div class="underline">
+
+    </div>
     <div class="gradient"></div>
+
 
     <!-- <div>
         <h1>Frequently Asked Questions</h1>

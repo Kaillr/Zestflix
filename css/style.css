@@ -22,3 +22,35 @@ body {
     font-display: optional;
     src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
 }
+
+.signIn label {
+    position: absolute;
+    top: 32%;
+    left: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    pointer-events: none;
+    transition: margin-top 0.3s ease;
+}
+
+.signIn label {
+    position: absolute;
+    top: 32%;
+    left: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    pointer-events: none;
+    transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+.signIn input:focus + label,
+.signIn input:not(:placeholder-shown) + label,
+.signIn input:valid + label {
+    top: 10%;
+    font-size: 14px;
+}
+
+.signIn label.active {
+    top: 10%;
+    font-size: 14px;
+}

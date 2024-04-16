@@ -1,142 +1,62 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zestflex</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/styleLogin.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/css/styleTest.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="wrapper">
-        <form action="">
-            <h1>Sign In</h1>
-
-            <div class="user-box">
-                <input type="text" placeholder="Email or phone number" id="usernameInfo">
-            </div>
-
-            <input type="password" placeholder="Password" id="passwordInput">
-            <button id="getDataButton">Sign In</button>
-            <button id="toggleButton">Show</button>
-        </form>
+  <div class="container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form action="" method="post">
+        <div class="user-box">
+          <input type="text" name="" required="" />
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" id="password" required="" />
+          <label>Password</label>
+          <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
+        </div>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
     </div>
-
-    <div>
-        <Label>Remember Me</Label><input type="checkbox">
-        <a href="loginHelp.html">Need Help?</a>
-    </div>
-
-    <div>
-        <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
-        <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
-                more</button>.</p>
-        <p id="displayText" style="display: none;"></p>
-    </div>
-
-    <span id="LearnMore">
-        "The information collected by Google reCAPTCHA is subject to the Google "
-        <a href="https://policies.google.com/privacy" id="recaptcha-privacy-link" data-uia="recaptcha-privacy-link"
-            target="_blank">Privacy Policy</a>
-        " and "
-        <a href="https://policies.google.com/terms" id="recaptcha-tos-link" data-uia="recaptcha-tos-link"
-            target="_blank">Terms of Service</a>
-        ", and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes
-        (it is not used for personalised advertising by Google)."
-    </span>
-
-    <script>
-        document.getElementById("LearnMore").addEventListener("click", function () {
-            displayElement.style.display = "block";
-
-
-            var passwordInput = document.getElementById('passwordInput');
-            var toggleButton = document.getElementById('toggleButton');
-            var getDataButton = document.getElementById('getDataButton');
-            var usernameInfo = document.getElementById('usernameInfo');
-
-            passwordInput.addEventListener('focus', function () {
-                toggleButton.textContent = 'Hide';
-            });
-
-            passwordInput.addEventListener('blur', function () {
-                toggleButton.textContent = 'Show';
-            });
-
-            toggleButton.addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent the default behavior of the button click
-                if (passwordInput.type === 'password') {
-                    passwordInput.type = 'text';
-                    toggleButton.textContent = 'Hide';
-                } else {
-                    passwordInput.type = 'password';
-                    toggleButton.textContent = 'Show';
-                }
-            });
-
-            getDataButton.addEventListener('click', function () {
-                event.preventDefault();
-                var username = usernameInfo.value;
-                var password = passwordInput.value;
-
-                if (username === '' || password === '') {
-                    alert('Please fill in both fields');
-                } else if (username === 'Fucmass' && password === 'suckonmadick') {
-                    window.location = "browse.html";
-                }
-                else if (username === 'Kailler' && password === 'morendin') {
-                    window.location = "browse.html";
-                }
-                else if (username === 'Akane' && password === 'zestyzaza') {
-                    window.location = "browse.html";
-                }
-                else if (username === 'shitosuplayers@gmail.com' && password === 'ferozzogsara') {
-                    window.location = "browse.html";
-                }
-                else {
-                    alert('Incorrect username or password');
-                }
-
-
-            });
-
-
-
-        /*         document.getElementById("LearnMore").addEventListener("click", function () {
-                    displayElement.style.display = "block";
-                    displayElement.textContent = "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
-                });
-        
-                document.getElementById("LearnMore").addEventListener("click", function () {
-                    var learnMoreButton = document.getElementById("LearnMore");
-                    learnMoreButton.style.display = "none";
-                });
-        
-                         document.getElementById("LearnMore").addEventListener("click", function () {
-                            var displayElement = document.getElementById("displayText");
-                            displayElement.style.display = "block";
-                            displayElement.textContent= "The information collected by Google reCAPTCHA is subject to the Google"
-                            var a = document.createElement('a');
-                            var linkText = document.createTextNode("Privacy Policy");
-                            a.appendChild(linkText);
-                            a.title = "Privacy Policy";
-                            a.href = "login.html";
-                            document.body.appendChild(a);
-                            displayElement.textContent = " and ";
-                            var a = document.createElement('a');
-                            var linkText = document.createTextNode("Terms of Service");
-                            a.appendChild(linkText);
-                            a.title = "Terms of Service";
-                            a.href = "login.html";
-                            document.body.appendChild(a);
-                            displayElement.textContent = ", and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
-                
-                
-                        });  */
-
-    </script>
+  </div>
+  <script src="/js/scriptTest.js"></script>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Div Visibility and Change Button Text on Click</title>
+<link rel="stylesheet" href="/css/styleTest.css">
+</head>
+<body>
+
+<div class="myDiv">
+  This is the div that will toggle its visibility when the button is clicked.
+</div>
+
+<button id="myButton">Click to Toggle Div</button>
+
+<script src="/js/scriptTest.js"></script>
+</body>
 </html>

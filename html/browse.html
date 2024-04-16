@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zestflix</title>
+    <link rel="preload"
+        href="https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff"
+        as="font" type="font/woff" crossorigin>
     <link rel="shortcut icon" href="/media/images/logoes/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleBrowse.css">
@@ -68,9 +71,92 @@
 
     <main>
         <div class="heroBanner">
-            <video src="/media/videos/heroes/Squid_Game_The Challenge_Official_Trailer.mp4" autoplay muted loop></video>
+
+            <video id="heroVideo" src="/media/videos/heroes/hell_sjove__Mikael-Theodor-Kristian.mp4" autoplay muted
+                loop></video>
+            <div class="bannerGradLeft"></div>
             <div class="bannerGrad"></div>
+
+            <div class="show-info">
+                <div class="show-banner">
+                    <img src="/media/images/showBanners/hellSjove_theMovie.png" alt="">
+                </div>
+                <p>An evil principal loves giving his students absences when they are late. One day every student
+                    came on time. That is when the principal decided to take revenge. </p>
+
+                <div class="hero-buttons">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <button id="play">
+                            ▶ Watch
+                        </button>
+                    </a>
+                    <button id="more-information">
+                        More Information
+                    </button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="age-rating">
+                    <p>18+</p>
+                </div>
+            </div>
         </div>
+        <div class="heroContent"></div>
+
+        <div class="shows-row">
+            <p id="row-title">Popular now</p>
+
+            <div class="slider">
+
+                <button id="previous">
+                </button>
+                <button id="next">
+                    <div id="arrow">
+                        <p>></p>
+                    </div>
+                </button>
+
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_1.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_2.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_1.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_2.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_1.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+                
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_2.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+                
+                <div class="show">
+                    <a href="/media/videos/movies/hell_sjove.mp4">
+                        <img src="/media/images/thumbnails/hell_sjove_the_movie_1.png" alt="Hell Sjove The Movie">
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src=" /js/script.js"></script>

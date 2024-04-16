@@ -1,59 +1,42 @@
-var passwordInput = document.getElementById('passwordInput');
-var toggleButton = document.getElementById('toggleButton');
-var getDataButton = document.getElementById('getDataButton');
-var usernameInfo = document.getElementById('usernameInfo');
+/* const passwordField = document.getElementById("password");
+const togglePassword = document.querySelector(".password-toggle-icon i");
 
-passwordInput.addEventListener('focus', function () {
-    toggleButton.textContent = 'Hide';
+togglePassword.addEventListener("click", function () {
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    togglePassword.classList.remove("fa-eye");
+    togglePassword.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password";
+    togglePassword.classList.remove("fa-eye-slash");
+    togglePassword.classList.add("fa-eye");
+  }
 });
 
-passwordInput.addEventListener('blur', function () {
-    toggleButton.textContent = 'Show';
-});
+ */
 
-toggleButton.addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent the default behavior of the button click
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleButton.textContent = 'Hide';
+document.getElementById("myButton").addEventListener("click", function() {
+  var divs = document.querySelectorAll(".myDiv");
+  for (var i = 0; i < divs.length; i++) {
+    if (divs[i].style.display === "none") {
+      divs[i].style.display = "block"; // Make it visible
+      document.getElementById("myButton").innerText = "Use a sign-in code"; // Change button text
     } else {
-        passwordInput.type = 'password';
-        toggleButton.textContent = 'Show';
+      divs[i].style.display = "none"; // Hide it
+      document.getElementById("myButton").innerText = "Use Password"; // Change button text
     }
+  }
 });
 
-getDataButton.addEventListener('click', function () {
-    event.preventDefault();
-    var username = usernameInfo.value;
-    var password = passwordInput.value;
-
-    if (username === '' || password === '') {
-        alert('Please fill in both fields');
-    } else if (username === 'Fucmass' && password === 'suckonmadick') {
-        window.location = "browse.html";
+document.getElementById("signInCode").addEventListener("click", function() {
+  var divs = document.querySelectorAll(".password-box");
+  for (var i = 0; i < divs.length; i++) {
+    if (divs[i].style.display === "none") {
+      divs[i].style.display = "block"; // Make it visible
+      document.getElementById("signInCode").innerText = "Use a sign-in code"; // Change button text
+    } else {
+      divs[i].style.display = "none"; // Hide it
+      document.getElementById("SignInCode").innerText = "Use Password"; // Change button text
     }
-    else if (username === 'Kailler' && password === 'morendin') {
-        window.location = "browse.html";
-    }
-    else if (username === 'Akane' && password === 'zestyzaza') {
-        window.location = "browse.html";
-    }
-    else if (username === 'shitosuplayers@gmail.com' && password === 'ferozzogsara') {
-        window.location = "browse.html";
-    }
-    else {
-        alert('Incorrect username or password');
-    }
-
-
+  }
 });
-
-document.getElementById("LearnMore").addEventListener("click", function () {
-    displayElement.style.display = "block";
-    displayElement.textContent = "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google).";
-});
-
-document.getElementById("LearnMore").addEventListener("click", function() {
-    var learnMoreButton = document.getElementById("LearnMore");
-    learnMoreButton.style.display = "none";
-  });

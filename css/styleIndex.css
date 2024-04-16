@@ -1,35 +1,49 @@
 body {
     height: calc(100vh*5);
+    overflow-x: hidden;
+    font-family: Netflix Sans;
 }
 
 header {
-    height: 92px;
+    height: 80px;
     width: 100%;
-    padding: 24px 148px;
+    padding: 0 148px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     background: rgb(0,0,0);
     background: linear-gradient(rgba(0,0,0,0.7) 50%, transparent 100%);
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1920px){
     header {
-        padding: 24px 80px;
+        padding: 0 calc(50vw - 606px);
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1279.9px) {
+    header {
+        padding: 0px 80px;
+    }
+}
+
+@media (max-width: 959.9px) {
     header {
         padding: 24px 32px;
     }
 }
 
+
 .navBranding {
-    height: 100%;
-    width: fit-content;
-    padding-bottom: 4px;
+    height: 40px;
+}
+
+@media (max-width: 959.9px) {
+    .navBranding {
+        height: 24px;
+    }
 }
 
 .navBranding img {
@@ -77,10 +91,10 @@ header {
 }
 
 .heroImgIndex img {
-    width: 100%;
-    height: 100%;
-    opacity: 30%;
-    
+    width: 100vw;
+    filter: brightness(43%);
+    opacity: 100%;
+    margin-top: -15px;
 }
 
 .LanguageSelect {
@@ -112,14 +126,114 @@ header {
     z-index: 20;
 }
 
-.IndexPage_Mtext h1 {
-    padding: 24px 148px;
-}
-
 .gradient {
     width: 100%;
     height: 100%;
     background: rgb(0,0,0);
-    margin-top: -300px;
+    margin-top: -1000px;
     background: linear-gradient(90deg, rgba(0,0,0,0.7) 30%, transparent 100%);
 }
+
+.IndexPage_Mtext {
+    padding: 0px 148px 64px;
+    height: 720px;
+    max-width: 120rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.IndexPage_Mtext h1 {
+    font-size: 3.5rem;
+    font-family: Netflix Sans;
+    margin: 0px 0px 8px;
+    height: fit-content;
+}
+
+#caret {
+    margin-left: -35px;
+    margin-right: 15px;
+}
+
+
+.IndexPage_Mtext p {
+    height: fit-content;
+    font-family: Netflix Sans;
+}
+
+.IndexPage_Mtext .StartsAt {
+    margin: 0px 0px 34px;
+}
+
+.IndexPage_Mtext .email_mt {
+    padding: 0px 0px 16px;
+}
+
+.enterEmail input {
+    padding: 24px 16px 8px;
+}
+
+@media (min-width: 1920px){
+    .IndexPage_Mtext {
+        padding: 0px 22.125rem;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 1279.9px) {
+    .IndexPage_Mtext {
+        padding: 0 5rem 3rem;
+    }
+}
+
+@media (max-width: 959.9px) {
+    .IndexPage_Mtext {
+        padding: 0 2rem 2.5rem;
+        height: 452px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .GetStarted_bt {
+        height: 56px;
+        width: 209px;
+        margin: -0.8px -0.8px -0.8px;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        background-color: var(--zestflix_color);
+    }
+}
+
+
+@media (max-width: 1279.9px) {
+    .IndexPage_Mtext h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+
+.enterEmail{
+    display: flex;
+}
+
+.underline {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -0.25rem;
+    border-radius: inherit;
+    background: linear-gradient( to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84% );
+    height: 5px;
+    
+}
+
+/*.underline {
+    border-radius: inherit;
+    background: linear-gradient( to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84% );
+    height: 10px;
+} /*

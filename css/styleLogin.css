@@ -1,23 +1,36 @@
+/*+-*/@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
 header {
     height: 90px;
     width: 100%;
-    padding: 0 3%;
+    padding: 24px 32px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
 
     background: rgb(0,0,0);
-    background: linear-gradient(rgba(0,0,0,0.8) 50%, transparent 100%);
+    background: linear-gradient(rgba(0,0,0,0.5), transparent 100%);
 }
 
 @media (max-width: 960px) {
     header {
-        padding: 24px 32px;
+        height: 74px;
     }
 }
 
+@media (min-width: 1280px) {
+    header {
+        padding: 24px 12%;
+    }
+
+}
+
 .navBranding {
-    height: 50%;
+    height: 100%;
     width: min-content;
 }
 
@@ -27,71 +40,114 @@ header {
     user-select: none;
 }
 
-.navRight {
-    display: flex;
-    width: fit-content;
-    height: 100%;
-}
-
-
-
-
 
 .signInContent {
     margin: 0 auto;
     width: 450px;
-    height: 660px;
+    height: fit-content;
 
     box-sizing: border-box;
-    padding: 60px 68px 40px;
+    padding: 48px 68px 40px;
     background-color: rgba(0, 0, 0, .75);
-}
-
-
-
-
-
-
-.signInButton {
-    width: 75px;
-    height: 30.4px;
-    border-width: 0.0625rem;
-    border-radius: 0.1875rem;
-
-    min-height: 2rem;
-    border: 0px;
-    background-color: var(--zestflix_color);
-
-    color: white;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-decoration: none;
     font-family: Netflix Sans;
-    font-weight: bolder;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.signInContent h1 {
+    margin-bottom: 28px;
 }
 
+.signInContent h3 {
+    margin: 18px 0;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
 
 .heroImg {
-    height: 100%;
-    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    position:absolute;
     top: 0;
 
     filter: brightness(50%);
     z-index: -1;
+    overflow: hidden;
 }
 
-input{
+.signIn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.signIn input {
+    color: white;
+    font-size: 16px;
+
+    box-sizing: border-box;
+    padding: 24px 16px 8px;
+    width: 100%;
+    height: 56px;
+    border: 0;
+
+    outline: 0.5px;
+    outline-style: solid;
+    outline-color: rgba(255, 255, 255, 0.33);
+    border-style: solid;
+
+    border-radius: 4px;
+
+    background-color: rgba(30, 30, 30, 0.5);
+}
+
+.user-box, .password-box {
+    position: relative;
+}
+
+.signIn label {
+    position: absolute;
+    top: 32%;
+    left: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: margin-top 0.3s ease;
+    /*font-size: 16px;*/
+    /*margin-top: 0px;*/
+    font-size: 12px;
+    margin-top: -6px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 38.4px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#getDataButton {
+    background-color: var(--zestflix_color);
+}
+
+.or {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    text-align: center;
+}
+
+#signInCode {
+    background-color: rgba(255, 255, 255, 0.175);
+}
+
+
+select {
     color: black;
 }
 
-button{
-    color: black;
-}
-
-select{
-    color: black;
+#displayText {
+    display: none;
 }

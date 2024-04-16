@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zestflix</title>
+    <link rel="preload" href="https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff" as="font" type="font/woff" crossorigin>
     <link rel="shortcut icon" href="/media/images/logoes/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleLogin.css">
@@ -18,41 +19,56 @@
     </header>
 
     <main>
+
+        <img class="heroImg" src="/media/images/heroes/index/Hero_index1.jpg" alt="">
         <div class="signInContent">
-        <div class="">
-
             <h1>Sign In</h1>
+            
+            <div class="signIn">
 
-            <div class="user-box">
-                <input type="text" placeholder="Email or phone number" id="usernameInfo">
+                <div class="user-box">
+                    <label class="input-label" for="">Email or phone number</label>
+                    <input type="text" id="usernameInfo" name="username" required>
+                </div>
+      
+                <div class="password-box">
+                    <label class="input-label" for="">Password</label>
+                    <input type="password" id="passwordInfo" name="password" required>
+                </div>
+      
+            </div>
+            
+            <button id="toggleButton">Show Password</button>
+            
+
+            <button id="getDataButton">Sign In</button>
+
+            <h3>OR</h3>
+            
+            <Button id="signInCode">Use a sign-in code</Button>
+            
+            <button> <a href="loginHelp.html">Forgot password?</a></button>
+
+            <div>
+                <input type="checkbox"><Label>Remember Me</Label>
+                <a href="loginHelp.html">Need Help?</a>
             </div>
 
-            <input type="password" placeholder="Password" id="passwordInput">
-            <button id="getDataButton">Sign In</button>
-            <button id="toggleButton">Show</button>
+            <div>
+                <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
+                <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
+                        more.</button></p>
+                        <br>
+                <p id="displayText"> "The information collected by Google reCAPTCHA is subject to the
+                    Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a
+                        href="https://policies.google.com/terms">Terms of Service</a>,
+                    and is used for providing, maintaining and improving the reCAPTCHA service and for general security
+                    purposes
+                    (it is not used for personalised advertising by Google)."</p>
 
+            </div>
         </div>
 
-        <div>
-            <Label>Remember Me</Label><input type="checkbox">
-            <a href="loginHelp.html">Need Help?</a>
-        </div>
-
-        <div>
-            <p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p>
-            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <button id="LearnMore">Learn
-                    more.</button></p>
-            <p style="display: none;" id="displayText"> "The information collected by Google reCAPTCHA is subject to the
-                Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a
-                    href="https://policies.google.com/terms">Terms of Service</a>,
-                and is used for providing, maintaining and improving the reCAPTCHA service and for general security
-                purposes
-                (it is not used for personalised advertising by Google)."</p>
-
-        </div>
-    </div>
-
-    <img class="heroImg" src="/media/images/heroes/index/Hero_index1.jpg" alt="">
     </main>
 
     <footer>

@@ -1,7 +1,10 @@
-var passwordInput = document.getElementById('passwordInput');
-var toggleButton = document.getElementById('toggleButton');
-var getDataButton = document.getElementById('getDataButton');
-var usernameInfo = document.getElementById('usernameInfo');
+const passwordInput = document.getElementById('passwordInfo');
+const toggleButton = document.getElementById('toggleButton');
+const getDataButton = document.getElementById('getDataButton');
+const usernameInfo = document.getElementById('usernameInfo');
+const signInCode = document.getElementById('signInCode');
+
+
 
 passwordInput.addEventListener('focus', function () {
     toggleButton.textContent = 'Hide';
@@ -44,8 +47,6 @@ getDataButton.addEventListener('click', function () {
     else {
         alert('Incorrect username or password');
     }
-
-
 });
 
 document.getElementById("LearnMore").addEventListener("click", function () {
@@ -55,4 +56,61 @@ document.getElementById("LearnMore").addEventListener("click", function () {
 document.getElementById("LearnMore").addEventListener("click", function () {
     var displayElement = document.getElementById("displayText");
     displayElement.style.display = "block";
+});
+
+document.getElementById("signInCode").addEventListener("click", function() {
+    var divs = document.querySelectorAll(".password-box");
+    for (var i = 0; i < divs.length; i++) {
+        var computedStyle = window.getComputedStyle(divs[i]);
+        if (computedStyle.display === "none") {
+            divs[i].style.display = "block"; // Make it visible
+            document.getElementById("signInCode").innerText = "Use a sign-in code"; // Change button text
+        } else {
+            divs[i].style.display = "none"; // Hide it
+            document.getElementById("signInCode").innerText = "Use Password"; // Change button text
+        }
+    }
+});
+
+  
+  
+
+document.addEventListener('DOMContentLoaded', function() {
+    const inputFields = document.querySelectorAll('.signIn input');
+
+    inputFields.forEach(function(inputField) {
+        inputField.addEventListener('focus', function() {
+            console.log('Input focused');
+            inputField.parentElement.querySelector('label').classList.add('focused');
+        });
+
+        inputField.addEventListener('blur', function() {
+            console.log('Input blurred');
+            if (inputField.value === '') {
+                inputField.parentElement.querySelector('label').classList.remove('focused');
+            }
+        });
+    });
+});
+
+const inputs = document.querySelectorAll('.signIn input');
+
+inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+        const label = this.nextElementSibling;
+        label.classList.add('active');
+    });
+
+    input.addEventListener('blur', function() {
+        const label = this.nextElementSibling;
+        if (!this.value.trim()) {
+            label.classList.remove('active');
+        }
+    });
+
+    // Check if inputs have initial values on page load
+    if (input.value.trim()) {
+        const label = input.nextElementSibling;
+        label.classList.add('active');
+    }
 });
