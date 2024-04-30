@@ -54,7 +54,7 @@ document.getElementById("LearnMore").addEventListener("click", function () {
     learnMoreButton.style.display = "none";
 });
 document.getElementById("LearnMore").addEventListener("click", function () {
-    var displayElement = document.getElementById("displayText");
+    var displayElement = document.getElementById("displayLearnMore");
     displayElement.style.display = "block";
 });
 
@@ -65,32 +65,13 @@ document.getElementById("signInCode").addEventListener("click", function() {
         if (computedStyle.display === "none") {
             divs[i].style.display = "block"; // Make it visible
             document.getElementById("signInCode").innerText = "Use a sign-in code"; // Change button text
+            document.getElementById("displaySignInCode").style.display = "none"; // Hide the text
         } else {
             divs[i].style.display = "none"; // Hide it
             document.getElementById("signInCode").innerText = "Use Password"; // Change button text
+            document.getElementById("displaySignInCode").style.display = "block"; // Show the text
         }
     }
-});
-
-  
-  
-
-document.addEventListener('DOMContentLoaded', function() {
-    const inputFields = document.querySelectorAll('.signIn input');
-
-    inputFields.forEach(function(inputField) {
-        inputField.addEventListener('focus', function() {
-            console.log('Input focused');
-            inputField.parentElement.querySelector('label').classList.add('focused');
-        });
-
-        inputField.addEventListener('blur', function() {
-            console.log('Input blurred');
-            if (inputField.value === '') {
-                inputField.parentElement.querySelector('label').classList.remove('focused');
-            }
-        });
-    });
 });
 
 const inputs = document.querySelectorAll('.signIn input');

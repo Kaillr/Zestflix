@@ -290,13 +290,15 @@
 
     .hero-buttons {
         display: flex;
+        width: fit-content;
+        height: fit-content;
         gap: 0.8vw;
     }
 
     .hero-buttons button {
         font-weight: bolder;
         font-size: 1.25vw;
-        border-radius: 4px;
+        border-radius: 0.35vw;
         border: 0;
         height: 3vw;
 
@@ -353,7 +355,7 @@
 @media (max-width: 1500px) {
     .shows-row {
         position: relative;
-        padding: 0 4% ;
+        padding: 0 4% 3vw;
     }
 }
 
@@ -364,10 +366,21 @@
     margin-bottom: 0.8vw;
 }
 
+@media (max-width: 800px) {
+    .shows-row #row-title {
+        font-size: 12px;
+    }
+}
+
 .slider {
     display: flex;
     gap: 0.5vw;
     width: 100%;
+    overflow-x: scroll;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
 }
 
 .show {
@@ -379,6 +392,25 @@
         min-width: calc((100% / 5) - 0.5vw);
     }
 }
+
+@media (max-width: 1100px) {
+    .show {
+        min-width: calc((100% / 4) - 0.5vw);
+    }
+}
+
+@media (max-width: 800px) {
+    .show {
+        min-width: calc((100% / 3) - 0.5vw);
+    }
+}
+
+@media (max-width: 500px) {
+    .show {
+        min-width: calc((100% / 2) - 0.5vw);
+    }
+}
+
 .show img {
     width: 100%;
     border-radius: 0.2vw;
@@ -387,10 +419,16 @@
 #previous, #next {
     position: absolute;
     background-color: rgba(20, 20, 20, 0.5);
-    height: 75%;
+    height: 8.4vw;
     width: 4vw;
     border: 0;
     transition: background-color ease-in 0.05s;
+}
+
+@media (max-width: 1400px) {
+    #previous, #next {
+        height: 10vw;
+    }
 }
 
 #previous:hover, #next:hover {
@@ -401,6 +439,7 @@
     left: 0;
     border-radius: 0 .2vw .2vw 0;
     display: none;
+
 }
 
 #next {
