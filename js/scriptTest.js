@@ -15,7 +15,7 @@ togglePassword.addEventListener("click", function () {
 
  */
 
-document.getElementById("myButton").addEventListener("click", function() {
+/* document.getElementById("myButton").addEventListener("click", function() {
   var divs = document.querySelectorAll(".myDiv");
   for (var i = 0; i < divs.length; i++) {
     if (divs[i].style.display === "none") {
@@ -39,4 +39,11 @@ document.getElementById("signInCode").addEventListener("click", function() {
       document.getElementById("SignInCode").innerText = "Use Password"; // Change button text
     }
   }
-});
+}); */
+
+/* var iframe = document.getElementById("iFrame");
+function b1() {
+  document.getElementById("iFrame").style.display = "block"
+  iframe.src = "cookie.html";
+}*/
+

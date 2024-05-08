@@ -58,7 +58,7 @@ document.getElementById("LearnMore").addEventListener("click", function () {
     displayElement.style.display = "block";
 });
 
-document.getElementById("signInCode").addEventListener("click", function() {
+document.getElementById("signInCode").addEventListener("click", function () {
     var divs = document.querySelectorAll(".password-box");
     for (var i = 0; i < divs.length; i++) {
         var computedStyle = window.getComputedStyle(divs[i]);
@@ -77,12 +77,12 @@ document.getElementById("signInCode").addEventListener("click", function() {
 const inputs = document.querySelectorAll('.signIn input');
 
 inputs.forEach(input => {
-    input.addEventListener('focus', function() {
+    input.addEventListener('focus', function () {
         const label = this.nextElementSibling;
         label.classList.add('active');
     });
 
-    input.addEventListener('blur', function() {
+    input.addEventListener('blur', function () {
         const label = this.nextElementSibling;
         if (!this.value.trim()) {
             label.classList.remove('active');
@@ -95,3 +95,19 @@ inputs.forEach(input => {
         label.classList.add('active');
     }
 });
+
+const openBtn = document.getElementById("openCookie");
+const closeBtn = document.getElementById("closeCookie");
+const cookie = document.getElementById("cookie");
+
+openBtn.addEventListener("click", () => {
+  cookie.classList.add("open");
+})
+
+closeBtn.addEventListener("click", () => {
+  cookie.classList.remove("open");
+})
+
+
+
+

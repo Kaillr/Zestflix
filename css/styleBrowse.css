@@ -376,7 +376,8 @@
     display: flex;
     gap: 0.5vw;
     width: 100%;
-    overflow-x: scroll;
+
+
 }
 
 .slider::-webkit-scrollbar {
@@ -385,7 +386,9 @@
 
 .show {
     min-width: calc((100% / 6) - 0.5vw);
+    transition: transform 0.2s ease-out;
 }
+
 
 @media (max-width: 1400px) {
     .show {
@@ -423,6 +426,7 @@
     width: 4vw;
     border: 0;
     transition: background-color ease-in 0.05s;
+    display: none;
 }
 
 @media (max-width: 1400px) {

@@ -2,9 +2,11 @@ body {
     height: calc(100vh*5);
     overflow-x: hidden;
     font-family: Netflix Sans;
+    background-color: black;
 }
 
 header {
+    position: absolute;
     height: 80px;
     width: 100%;
     padding: 0 148px;
@@ -13,11 +15,11 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    background: rgb(0,0,0);
-    background: linear-gradient(rgba(0,0,0,0.7) 50%, transparent 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0.7) 50%, transparent 100%);
 }
 
-@media (min-width: 1920px){
+@media (min-width: 1920px) {
     header {
         padding: 0 calc(50vw - 606px);
     }
@@ -84,25 +86,22 @@ header {
 }
 
 .heroImgIndex {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 720px;
+    overflow: hidden;
 }
 
 .heroImgIndex img {
-    width: 100vw;
+    min-width: 100%;
     filter: brightness(43%);
     opacity: 100%;
-    margin-top: -15px;
-}
-
-@media (max-width: 1600px){
-    .heroImgIndex img {
-        height: 875px;
-        width: 100vw;
-        overflow-x: hidden;
-    }
+    position: absolute;
 }
 
 .LanguageSelect {
@@ -116,11 +115,14 @@ header {
     border: 1 solid inset;
     border-radius: 0.1875rem;
 
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
 }
-.LanguageSelect option{
+
+.LanguageSelect option {
     margin: 40px;
     background: white;
     color: #000;
@@ -136,20 +138,21 @@ header {
 
 .gradient {
     width: 100%;
-    height: 20%;
-    background: rgb(0,0,0);
+    height: 200%;
+    background: rgb(0, 0, 0);
     margin-top: -1000px;
-    background: linear-gradient(90deg, rgba(0,0,0,0.7) 30%, transparent 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, transparent 100%);
+    display: none;
 }
 
 .IndexPage_Mtext {
     padding: 0px 148px 64px;
-    height: 720px;
     max-width: 120rem;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    position: absolute;
 }
 
 .IndexPage_Mtext h1 {
@@ -182,9 +185,9 @@ header {
     padding: 24px 16px 8px;
 }
 
-@media (min-width: 1920px){
+@media (min-width: 1920px) {
     .IndexPage_Mtext {
-        padding: 0px 22.125rem;
+        padding: 0px 22.125rem 64px;
         margin: 0 auto;
     }
 }
@@ -220,7 +223,7 @@ header {
     }
 }
 
-.enterEmail{
+.enterEmail {
     display: flex;
 }
 
@@ -231,110 +234,150 @@ header {
     bottom: 0;
     left: 0;
     z-index: -1;
-    margin-top: 50px;
     border-radius: inherit;
-    background: linear-gradient( to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84% );
+    background: linear-gradient(to right,
+            rgba(33, 13, 22, 1) 16%,
+            rgba(184, 40, 105, 1),
+            rgba(229, 9, 20, 1),
+            rgba(184, 40, 105, 1),
+            rgba(33, 13, 22, 1) 84%);
     height: 5px;
     z-index: 100;
+    filter: hue-rotate(-45deg) saturate(1.2);
+
 }
 
-@media (min-width: 1920px){
-    .underline {
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        margin-top: 50px;
-        border-radius: inherit;
-        background: linear-gradient( to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84% );
-        height: 5px;
-        z-index: 100;
+.triB {
+    z-index: 10;
+    width: 100%;
+    padding: 100px 148px 0 148px;
+    background-color: black;
+    position: relative;
+}
+
+@media (min-width: 1920px) {
+    .triB {
+        padding: 0 calc(50vw - 606px);
     }
 }
 
-@media (min-width: 1280px){
-    .underline {
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        margin-top: 50px;
-        border-radius: inherit;
-        background: linear-gradient( to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84% );
-        height: 5px;
-        z-index: 100;
-    }
-}
-@media (min-width: 1920px){
-     .triB{
-        z-index: 10;
-        height: 100%;
-        width: 100%;
-        background-color:  black;
-        margin-top: -54.7vh;
-        padding: 0px  22.125rem;
-        margin: 0 auto;
+@media (max-width: 1279.9px) {
+    .triB {
+        padding: 0px 80px;
     }
 }
 
-@media (min-width: 1280px){
-    .triB{
-       z-index: 10;
-       height: 100%;
-       width: 100%;
-       margin-top: -54.7vh;
-       background-color:  black;
-       padding: 0  9.25rem;
-   }
-}
-
-@media (max-width: 1279px){
-    .triB{
-       z-index: 10;
-       height: 100%;
-       width: 100%;
-       margin-top: -54.7vh;
-       background-color:  black;
-   }
+@media (max-width: 959.9px) {
+    .triB {
+        padding: 24px 32px;
+    }
 }
 
 
 
 #MRTJ {
-    padding: 0px 0px 64px;
-    height: 60px;
     max-width: 120rem;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 45px 0 15px;
 }
 
-@media (min-width: 1920px){
-    #MRTJ {
-        padding: 0px 22.125rem;
-        margin: 0 auto;
+
+@media (min-width: 1920px) {
+    .triB {
+        padding: 0 calc(50vw - 606px);
     }
 }
 
-
 @media (max-width: 1279.9px) {
-    #MRTJ{
-        padding: 0 5rem 3rem;
+    .triB {
+        padding: 0px 80px;
     }
 }
 
 @media (max-width: 959.9px) {
-    #MRTJ {
-        padding: 0 2rem 2.5rem;
-        height: 452px;
+    .triB {
+        padding: 24px 32px;
     }
 }
 
-.FAQ{
+.boexsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.boexs {
+    box-sizing: border-box;
+    padding: 1.5rem 1rem 8rem 1rem;
+    min-height: 50px;
+    background: linear-gradient(149deg,
+            #192247 0%,
+            #210e17 96.86%);
+    border-radius: 1rem;
+    width: 100%;
+    position: relative;
+    filter: hue-rotate(-45deg) saturate(1.2);
+}
+
+.boexs h1 {
+    font-size: 1.5rem;
+}
+
+.boexs p {
+    opacity: 70%;
+    font-size: 1rem;
+    padding-top: 1vw;
+}
+
+.boexs svg {
+    box-sizing: content-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.FAQ {
     z-index: 100;
+}
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #2D2D2D;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+
+
+.collapsible h1{
+    color: #ffffff;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible:hover {
+    background-color: #414141;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #2D2D2D;
+    transition: max-height 2s ease-out;
+}
+
+.content.active {
+    
 }
