@@ -44,6 +44,9 @@ getDataButton.addEventListener('click', function () {
     else if (username === 'shitosuplayers@gmail.com' && password === 'ferozzogsara') {
         window.location = "browse.html";
     }
+    else if (username === 'admin' && password === 'passord'){
+        window.location = "browse.html"
+    }
     else {
         alert('Incorrect username or password');
     }
