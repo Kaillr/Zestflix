@@ -1,8 +1,7 @@
-window.addEventListener('scroll', function() {
-    var headerSolid = document.getElementById('headerSolid');
-    if (window.pageYOffset > 0) {
-        headerSolid.classList.add('show');
-    } else {
-        headerSolid.classList.remove('show');
-    }
+// Add scroll event listener to window
+window.addEventListener('scroll', () => {
+    // Get the header element
+    const header = document.getElementById('headerSolid');
+    // Toggle 'show' class based on page Y offset
+    header.classList.toggle('show', window.pageYOffset > 0);
 });
