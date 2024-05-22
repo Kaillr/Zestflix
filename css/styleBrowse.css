@@ -376,13 +376,15 @@
     display: flex;
     gap: 0.5vw;
     width: 100%;
+    overflow-x: scroll;
 
-
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .slider::-webkit-scrollbar {
     display: none;
-}
+  }
 
 .show {
     min-width: calc((100% / 6) - 0.5vw);
@@ -471,3 +473,12 @@
     transition: opacity ease-in 0.05s;
 }
 
+.yourFavorites {
+    margin-top: 80px;
+}
+
+@media (max-width: 950px) {
+    .yourFavorites {
+        margin-top: 50px;
+    }
+}

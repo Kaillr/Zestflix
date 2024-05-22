@@ -54,11 +54,11 @@ getDataButton.addEventListener('click', function () {
 
 document.getElementById("LearnMore").addEventListener("click", function () {
     var learnMoreButton = document.getElementById("LearnMore");
-    learnMoreButton.style.display = "none";
+    learnMoreButton.style.opacity = "0";
 });
 document.getElementById("LearnMore").addEventListener("click", function () {
     var displayElement = document.getElementById("displayLearnMore");
-    displayElement.style.display = "block";
+    displayElement.style.opacity = "1";
 });
 
 document.getElementById("signInCode").addEventListener("click", function () {

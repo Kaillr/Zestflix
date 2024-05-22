@@ -1,4 +1,6 @@
-/*+-*/@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+/*+-*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+
 body {
     background-color: black;
     overflow-x: hidden;
@@ -12,8 +14,8 @@ header {
     display: flex;
     align-items: center;
 
-    background: rgb(0,0,0);
-    background: linear-gradient(rgba(0,0,0,0.5), transparent 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent 100%);
 }
 
 @media (max-width: 960px) {
@@ -25,6 +27,13 @@ header {
 @media (min-width: 1280px) {
     header {
         padding: 24px 12%;
+    }
+
+}
+
+@media (min-width: 1920px) {
+    header {
+        padding: 24px 19%;
     }
 
 }
@@ -51,6 +60,7 @@ header {
     background-color: rgba(0, 0, 0, .75);
     font-family: Netflix Sans;
 }
+
 .signInContent h1 {
     margin-bottom: 28px;
 }
@@ -66,7 +76,7 @@ header {
 .heroImg {
     min-width: 100%;
     min-height: 100%;
-    position:absolute;
+    position: absolute;
     top: 0;
 
     filter: brightness(50%);
@@ -100,7 +110,8 @@ header {
     background-color: rgba(30, 30, 30, 0.5);
 }
 
-.user-box, .password-box {
+.user-box,
+.password-box {
     position: relative;
 }
 
@@ -152,6 +163,63 @@ select {
 }
 
 #displayLearnMore {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
+#LearnMore {
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    font-size: 13px;
+    background-color: transparent;
+    color: #0071eb;
+}
+
+.forgotPassword {
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+}
+
+.signInContent a {
+    text-decoration: none;
+}
+
+.signInContent a:hover {
+    text-decoration: line;
+}
+
+.rememberMe {
+    display: flex;
+    gap: 10px;
+}
+
+.captaProtection {
+    opacity: 60%;
+    font-size: 13px;
+}
+
+.signInContentBottom {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.newToNetflix p {
+    color: #8c8c8c;
+    ;
+}
+
+.newToNetflix a {
+    opacity: 100%;
+}
+
+footer {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgb(0, 0, 0) 20%);
+    margin-top: 50px;
+    box-shadow: 0 50vh 0 50vh rgb(0, 0, 0);
+
+    padding: 80px 30px;
+}
