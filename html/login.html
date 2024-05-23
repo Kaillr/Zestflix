@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zestflix</title>
-    <link rel="preload"
-        href="https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff"
-        as="font" type="font/woff" crossorigin>
-    <link rel="shortcut icon" href="/media/images/logoes/favicon.png" type="image/x-icon">
+    <title>Zestflix Login</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleLogin.css">
     <link rel="stylesheet" href="/css/stylecookie.css">
@@ -17,113 +13,80 @@
 <body>
     <header>
         <a class="navBranding" href="/html/index.html">
-            <img src="/media/images/logoes/Netflix_Text_logo.svg" alt="zestflix Logo">
+            <img src="/media/images/logoes/Netflix_Text_logo.svg" alt="Zestflix Logo">
         </a>
     </header>
 
     <main>
-
         <img class="heroImg" src="/media/images/heroes/index/Hero_index1.jpg" alt="">
         <div class="signInContent">
             <h1>Sign In</h1>
 
-            <div class="signIn">
-
+            <form id="loginForm" class="signIn">
                 <div class="user-box">
-                    <label class="input-label" for="">Email address or phone number</label>
+                    <label class="input-label" for="usernameInfo">Email address or phone number</label>
                     <input type="text" id="usernameInfo" name="username" required>
                 </div>
 
                 <div class="password-box">
-                    <label class="input-label" for="">Password</label>
+                    <label class="input-label" for="passwordInfo">Password</label>
                     <input type="password" id="passwordInfo" name="password" required>
                 </div>
 
-                <div>
-                    <p id="displaySignInCode">Message and data rates may apply</p>
-                </div>
-
-            </div>
-
-            <button id="toggleButton">Show Password</button>
-
-
-            <button id="getDataButton">Sign In</button>
+                <button id="toggleButton">Show Password</button>
+                <button type="submit" id="getDataButton">Sign In</button>
+            </form>
 
             <h3>OR</h3>
-
-            <Button id="signInCode">Use a sign-in code</Button>
+            <button id="signInCode">Use a sign-in code</button>
 
             <div class="forgotPassword"><a href="loginHelp.html">Forgot password?</a></div>
 
             <div class="signInContentBottom">
-                <div class="rememberMe"><input type="checkbox"><Label>Remember Me</Label></div>
-
-
-                <div class="newToNetflix"><p>New to Netflix? <a href="index.html">Sign Up Now</a>.</p></div>
+                <div class="rememberMe"><input type="checkbox"><label>Remember Me</label></div>
+                <div class="newToNetflix">
+                    <p>New to Netflix? <a href="signUp.html">Sign Up Now</a>.</p> <!-- a tag should be linked to index just changed it for now that you have to make an account in a seperate html file to login -->
+                </div>
                 <div class="captaProtection">
                     <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.
-                        <button id="LearnMore">Learn
-                            more.</button>
+                        <button id="LearnMore">Learn more.</button>
                     </p>
                     <br>
-                    <p id="displayLearnMore"> "The information collected by Google reCAPTCHA is subject to the
-                        Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a
-                            href="https://policies.google.com/terms">Terms of Service</a>,
-                        and is used for providing, maintaining and improving the reCAPTCHA service and for general
-                        security
-                        purposes
-                        (it is not used for personalised advertising by Google)."</p>
-
+                    <p id="displayLearnMore">"The information collected by Google reCAPTCHA is subject to the Google <a
+                            href="https://policies.google.com/privacy">Privacy Policy</a> and <a
+                            href="https://policies.google.com/terms">Terms of Service</a>, and is used for providing,
+                        maintaining and improving the reCAPTCHA service and for general security purposes (it is not
+                        used for personalized advertising by Google)."</p>
                 </div>
             </div>
         </div>
 
         <div class="cookie" id="cookie">
             <div class="cookieHeader">
-                <h1>Privacy Prefernces Center</h1>
-                <img src="/media/images/logoes/Netflix_Text_logo.svg" alt="Zestflix logo" width=25%>
+                <h1>Privacy Preferences Center</h1>
+                <img src="/media/images/logoes/Netflix_Text_logo.svg" alt="Zestflix logo" width="25%">
                 <div class="cookieInner">
-
-
-                    <p>General Descriptopn</p>
-
-                    <p>
-                        This cookie tool will help you understand who is using cookies to collect information from your
-                        device, for what purposes they use the information, and how yuo can control the use of cookies
-                        for
-                        non-eesential activites.
-                    </p>
+                    <p>General Description</p>
+                    <p>This cookie tool will help you understand who is using cookies to collect information from your
+                        device, for what purposes they use the information, and how you can control the use of cookies
+                        for non-essential activities.</p>
                     <br>
-                    <p>
-                        Netflix supports the Self-Regulatory Principles for Online Behavioral Advertising of the Digital
+                    <p>Netflix supports the Self-Regulatory Principles for Online Behavioral Advertising of the Digital
                         Advertising Alliance (DAA), the Digital Advertising Alliance of Canada (DAAC), and the European
-                        Interactive Digital Advertising Alliance (EDAA).
-                    </p>
+                        Interactive Digital Advertising Alliance (EDAA).</p>
                     <br>
-                    <p>
-                        If you opt out of advertising cookies, you may still see Netflix ads on other sites, but those
-                        ads
-                        will not be customized by us or our service providers and will continue to customize your
-                        experince
-                        on our website via our use of cookies you have not refused.
-                    </p>
+                    <p>If you opt out of advertising cookies, you may still see Netflix ads on other sites, but those
+                        ads will not be customized by us or our service providers and will continue to customize your
+                        experience on our website via our use of cookies you have not refused.</p>
                     <br>
-                    <p>
-                        Alternatively, privacy settings in most browsers will allow you to prevent your browser from
-                        accepting new cookies, or disable cookies altogether. if your browser is set to not accept any
+                    <p>Alternatively, privacy settings in most browsers will allow you to prevent your browser from
+                        accepting new cookies, or disable cookies altogether. If your browser is set to not accept any
                         cookies, you will not receive Interest-Based Advertising, but your use of the Netflix service
-                        may be
-                        imparied or unavailable. In addition, if you use our cookie tool to opt-out of certian cookies,
-                        your
-                        opt-out preferences will be remembered by placing a cookie on your device. It is therefore
-                        important
-                        that your browser is configured to accept cookies for your preferences to take effect. If you
-                        delete
-                        or clear your cookies, or if you change which web browser you are using, you will need to set
-                        your
-                        cookie preferences again.
-                    </p>
+                        may be impaired or unavailable. In addition, if you use our cookie tool to opt-out of certain
+                        cookies, your opt-out preferences will be remembered by placing a cookie on your device. It is
+                        therefore important that your browser is configured to accept cookies for your preferences to
+                        take effect. If you delete or clear your cookies, or if you change which web browser you are
+                        using, you will need to set your cookie preferences again.</p>
                     <br>
                     <p>For more information on our use of cookies, please visit the <a
                             href="https://help.netflix.com/legal/privacy#cookies">Cookies and Internet Advertising</a>
@@ -134,7 +97,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer>
@@ -144,10 +106,10 @@
             </div>
             <div>
                 <a href="https://help.netflix.com/en/node/412">FAQ</a>
-                <button id="openCookie">Cookie Prefernces</button>
-                <select class="LanguageSelect" id="" name="LanguageSelect">
+                <button id="openCookie">Cookie Preferences</button>
+                <select class="LanguageSelect" name="LanguageSelect">
                     <option lang="nb" label="Norsk bokmål" value="nb-NO">Norsk bokmål</option>
-                    <option lang="en" label="English" value="en-NO" selected="">English</option>
+                    <option lang="en" label="English" value="en-NO" selected>English</option>
                 </select>
             </div>
             <div>
@@ -155,10 +117,9 @@
                 <a href="https://help.netflix.com/legal/corpinfo">Corporate information</a>
             </div>
             <div>
-                <a href="https://help.netflix.com/legal/termsofuse">Terns of Use</a>
+                <a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a>
                 <a href="https://help.netflix.com/en/node/100637">Advert choices</a>
             </div>
-
             <a href="https://help.netflix.com/legal/privacy">Privacy</a>
         </div>
     </footer>

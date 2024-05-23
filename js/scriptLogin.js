@@ -1,56 +1,39 @@
-const passwordInput = document.getElementById('passwordInfo');
-const toggleButton = document.getElementById('toggleButton');
+document.addEventListener('DOMContentLoaded', function () {
+    const passwordInput = document.getElementById('passwordInfo');
+    const toggleButton = document.getElementById('toggleButton');
+    const getDataButton = document.getElementById('getDataButton');
+    const usernameInfo = document.getElementById('usernameInfo');
+
+    // Toggle Password Visibility
+    toggleButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleButton.textContent = 'Hide';
+        } else {
+            passwordInput.type = 'password';
+            toggleButton.textContent = 'Show';
+        }
+    });
+
+    // Login Form Submission
+    getDataButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        const username = usernameInfo.value;
+        const password = passwordInput.value;
+
+        if (username === '' || password === '') {
+            alert('Please fill in both fields');
+        } else if (localStorage.getItem(username) === password) {
+            window.location = 'browse.html';
+        } else {
+            alert('Incorrect username or password');
+        }
+    });
+});
+
 const getDataButton = document.getElementById('getDataButton');
-const usernameInfo = document.getElementById('usernameInfo');
 const signInCode = document.getElementById('signInCode');
-
-
-
-passwordInput.addEventListener('focus', function () {
-    toggleButton.textContent = 'Hide';
-});
-
-passwordInput.addEventListener('blur', function () {
-    toggleButton.textContent = 'Show';
-});
-
-toggleButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleButton.textContent = 'Hide';
-    } else {
-        passwordInput.type = 'password';
-        toggleButton.textContent = 'Show';
-    }
-});
-
-getDataButton.addEventListener('click', function () {
-    event.preventDefault();
-    var username = usernameInfo.value;
-    var password = passwordInput.value;
-
-    if (username === '' || password === '') {
-        alert('Please fill in both fields');
-    } else if (username === 'Fucmass' && password === 'suckonmadick') {
-        window.location = "browse.html";
-    }
-    else if (username === 'Kailler' && password === 'morendin') {
-        window.location = "browse.html";
-    }
-    else if (username === 'Akane' && password === 'zestyzaza') {
-        window.location = "browse.html";
-    }
-    else if (username === 'shitosuplayers@gmail.com' && password === 'ferozzogsara') {
-        window.location = "browse.html";
-    }
-    else if (username === 'admin' && password === 'passord'){
-        window.location = "browse.html"
-    }
-    else {
-        alert('Incorrect username or password');
-    }
-});
 
 document.getElementById("LearnMore").addEventListener("click", function () {
     var learnMoreButton = document.getElementById("LearnMore");
@@ -77,40 +60,14 @@ document.getElementById("signInCode").addEventListener("click", function () {
     }
 });
 
-const inputs = document.querySelectorAll('.signIn input');
-
-inputs.forEach(input => {
-    input.addEventListener('focus', function () {
-        const label = this.nextElementSibling;
-        label.classList.add('active');
-    });
-
-    input.addEventListener('blur', function () {
-        const label = this.nextElementSibling;
-        if (!this.value.trim()) {
-            label.classList.remove('active');
-        }
-    });
-
-    // Check if inputs have initial values on page load
-    if (input.value.trim()) {
-        const label = input.nextElementSibling;
-        label.classList.add('active');
-    }
-});
-
 const openBtn = document.getElementById("openCookie");
 const closeBtn = document.getElementById("closeCookie");
 const cookie = document.getElementById("cookie");
 
 openBtn.addEventListener("click", () => {
-  cookie.classList.add("open");
+    cookie.classList.add("open");
 })
 
 closeBtn.addEventListener("click", () => {
-  cookie.classList.remove("open");
+    cookie.classList.remove("open");
 })
-
-
-
-
