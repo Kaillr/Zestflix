@@ -54,3 +54,12 @@ body {
     top: 10%;
     font-size: 14px;
 }
+
+footer {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgb(0, 0, 0) 20%);
+    margin-top: 50px;
+    box-shadow: 0 50vh 0 50vh rgb(0, 0, 0);
+
+    padding: 80px 30px;
+}
