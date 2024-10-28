@@ -1,6 +1,6 @@
     body {
         height: calc(100vh*5);
-        font-family: Netflix Sans;
+        font-family: Zestflix Sans;
         user-select: none;
         overflow-x: hidden;
     }
@@ -115,7 +115,7 @@
     }
 
     header a {
-        font-family: Netflix Sans;
+        font-family: Zestflix Sans;
         font-size: 14px;
         text-decoration: none;
         color: white;

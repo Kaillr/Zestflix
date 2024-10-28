@@ -58,7 +58,7 @@ header {
     box-sizing: border-box;
     padding: 48px 68px 40px;
     background-color: rgba(0, 0, 0, .75);
-    font-family: Netflix Sans;
+    font-family: Zestflix Sans;
 }
 
 .signInContent h1 {
@@ -206,12 +206,12 @@ select {
     flex-direction: column;
 }
 
-.newToNetflix p {
+.newToZestflix p {
     color: #8c8c8c;
     ;
 }
 
-.newToNetflix a {
+.newToZestflix a {
     opacity: 100%;
 }
 

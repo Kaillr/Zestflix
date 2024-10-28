@@ -12,15 +12,14 @@ body {
 
 :root {
     --zestflix_color: #FF00E4;
-    --netflix_color: #DB202C;
-    --netflix_logo_font: BebasNeue;
+    --zestflix_logo_font: BebasNeue;
 }
 
 @font-face {
-    font-family: 'Netflix Sans';
+    font-family: 'Zestflix Sans';
     font-weight: 300;
     font-display: optional;
-    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format('woff')
+    src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format('woff2'),url(https://assets.nflxext.com/ffe/siteui/fonts/zestflix-sans/v3/ZestflixSans_W_Lt.woff) format('woff')
 }
 
 .signIn label {

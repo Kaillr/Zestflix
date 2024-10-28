@@ -1,7 +1,7 @@
 body {
     height: calc(100vh*5);
     overflow-x: hidden;
-    font-family: Netflix Sans;
+    font-family: Zestflix Sans;
     background-color: black;
 }
 
@@ -77,7 +77,7 @@ header {
     font-size: 0.875rem;
     font-weight: 500;
     text-decoration: none;
-    font-family: Netflix Sans;
+    font-family: Zestflix Sans;
     font-weight: bolder;
 
     display: flex;
@@ -110,7 +110,7 @@ header {
     height: calc(20px - 1.6px);
     padding: 6px 36px;
     background-color: rgb(20, 20, 20);
-    font-family: Netflix Sans;
+    font-family: Zestflix Sans;
     font-weight: bolder;
     border: 1 solid inset;
     border-radius: 0.1875rem;
@@ -157,7 +157,7 @@ header {
 
 .IndexPage_Mtext h1 {
     font-size: 3.5rem;
-    font-family: Netflix Sans;
+    font-family: Zestflix Sans;
     margin: 0px 0px 8px;
     height: fit-content;
 }
@@ -170,7 +170,7 @@ header {
 
 .IndexPage_Mtext p {
     height: fit-content;
-    font-family: Netflix Sans;
+    font-family: Zestflix Sans;
 }
 
 .IndexPage_Mtext .StartsAt {
